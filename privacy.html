@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique de confidentialité des applications DRDev App, notamment Stop SPAM.">
+  <title>Politique de confidentialité — DRDev App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0e0e10;
+      --surface: #1a1a1f;
+      --border: #2a2a32;
+      --text: #f5f5f5;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .back-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    main {
+      padding: 64px 0 96px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    ul {
+      color: var(--muted);
+      margin-bottom: 14px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--muted);
+      margin: 0 8px;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">DRDev<span>.</span>App</a>
+        <a href="/" class="back-link">← Retour au site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Dernière mise à jour : avril 2026</p>
+
+      <h2>1. Présentation</h2>
+      <p>La présente politique de confidentialité s'applique aux applications mobiles éditées par <strong>DRDev App</strong>, micro-entreprise française, et notamment à l'application <strong>Stop SPAM</strong> disponible sur Google Play Store.</p>
+      <p>Stop SPAM est une application Android qui bloque automatiquement les appels provenant de numéros non sollicités (notamment les numéros NPV — Numéros à Valeur ajoutée), en utilisant l'API de filtrage d'appels d'Android (<em>CallScreeningService</em>).</p>
+
+      <h2>2. Données collectées</h2>
+      <p>Les applications DRDev App <strong>ne collectent, ne stockent et ne transmettent aucune donnée personnelle</strong> à des serveurs distants.</p>
+      <ul>
+        <li>Aucun compte utilisateur n'est requis.</li>
+        <li>Aucune donnée relative aux appels reçus (numéros, durée, identité) n'est enregistrée ou envoyée.</li>
+        <li>Les applications fonctionnent entièrement en local sur votre appareil.</li>
+      </ul>
+
+      <h2>3. Permissions utilisées (Stop SPAM)</h2>
+      <p>L'application Stop SPAM demande les permissions suivantes :</p>
+      <ul>
+        <li><strong>CALL_SCREENING (CallScreeningService)</strong> — service système Android permettant d'intercepter et bloquer les appels entrants correspondant aux plages NPV. Aucune conversation n'est écoutée ni enregistrée.</li>
+      </ul>
+
+      <h2>4. Liste de blocage (ARCEP)</h2>
+      <p>Les plages de numéros bloqués par Stop SPAM sont issues des données publiques publiées par l'<strong>ARCEP</strong> (Autorité de Régulation des Communications Électroniques et des Postes), conformément à la Décision n° 2022-1583.</p>
+      <p>Ces données sont téléchargées périodiquement depuis un dépôt public (GitHub). Elles ne contiennent aucune information personnelle.</p>
+
+      <h2>5. Achat intégré</h2>
+      <p>Stop SPAM propose un achat unique via Google Play Billing. La transaction est entièrement gérée par Google Play et soumise à ses conditions générales. L'application ne reçoit ni ne stocke aucune information bancaire ou de paiement.</p>
+
+      <h2>6. Services tiers</h2>
+      <p>Les applications DRDev App ne font appel à aucun service d'analyse (<em>analytics</em>), de publicité ou de suivi comportemental (Firebase Analytics, Facebook SDK, etc.).</p>
+      <p>Les seuls services externes utilisés sont :</p>
+      <ul>
+        <li><strong>Google Play Billing</strong> — gestion de l'achat intégré (Stop SPAM).</li>
+        <li><strong>GitHub</strong> — hébergement du dépôt public contenant les listes de blocage.</li>
+      </ul>
+
+      <h2>7. Sécurité</h2>
+      <p>Les données de blocage étant traitées entièrement en local sur l'appareil, elles ne transitent par aucun réseau externe et ne sont exposées à aucun risque de fuite.</p>
+
+      <h2>8. Droits des utilisateurs (RGPD)</h2>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+      <ul>
+        <li>Droit d'accès, de rectification et d'effacement de vos données.</li>
+        <li>Droit à la portabilité.</li>
+        <li>Droit d'opposition.</li>
+      </ul>
+      <p>Étant donné qu'aucune donnée personnelle n'est collectée, ces droits s'exercent directement sur votre appareil (désinstallation de l'application, effacement des données via les paramètres Android).</p>
+
+      <h2>9. Contact</h2>
+      <p>Pour toute question relative à cette politique de confidentialité, utilisez le <a href="/#contact">formulaire de contact</a> disponible sur le site.</p>
+
+      <h2>10. Modifications</h2>
+      <p>Cette politique peut être mise à jour. En cas de modification significative, une notification sera affichée dans l'application concernée. L'utilisation continue de l'application après modification vaut acceptation de la nouvelle politique.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 DRDev App — Tous droits réservés.</p>
+      <p style="margin-top: 8px;">
+        <a href="/">Accueil</a>
+        ·
+        <a href="/#contact">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
