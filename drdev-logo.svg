@@ -1,0 +1,61 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGrad" cx="22%" cy="18%" r="115%">
+      <stop offset="0%" stop-color="#2a2a35"/>
+      <stop offset="55%" stop-color="#0e0e10"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </radialGradient>
+
+    <linearGradient id="dGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f0f0f3"/>
+      <stop offset="100%" stop-color="#c4c4ca"/>
+    </linearGradient>
+
+    <linearGradient id="dShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="dotGrad" cx="32%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="38%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </radialGradient>
+
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+
+    <clipPath id="dClip">
+      <path d="M 0 0 L 66 0 A 144 144 0 0 1 66 288 L 0 288 Z M 66 66 A 78 78 0 0 1 66 222 Z" fill-rule="evenodd"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background rounded square (iOS app icon ratio) -->
+  <rect width="512" height="512" rx="115" ry="115" fill="url(#bgGrad)"/>
+
+  <!-- Inner edge glass highlight -->
+  <rect x="2" y="2" width="508" height="508" rx="113" ry="113"
+        fill="none" stroke="white" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <!-- The stylized "D" -->
+  <g transform="translate(95, 112)">
+    <!-- D outer fill with hole (evenodd) -->
+    <path d="M 0 0 L 66 0 A 144 144 0 0 1 66 288 L 0 288 Z M 66 66 A 78 78 0 0 1 66 222 Z"
+          fill="url(#dGlass)" fill-rule="evenodd"/>
+
+    <!-- Glass shine clipped inside the D -->
+    <g clip-path="url(#dClip)">
+      <ellipse cx="80" cy="15" rx="190" ry="85" fill="url(#dShine)"/>
+    </g>
+  </g>
+
+  <!-- Green dot signature (echoes the "." of DRDev.App) -->
+  <!-- Outer glow halo -->
+  <circle cx="385" cy="370" r="55" fill="#22c55e" opacity="0.4" filter="url(#dotGlow)"/>
+  <!-- Dot body -->
+  <circle cx="385" cy="370" r="38" fill="url(#dotGrad)"/>
+  <!-- Glass highlight on dot -->
+  <ellipse cx="372" cy="358" rx="14" ry="10" fill="white" opacity="0.5"/>
+</svg>
