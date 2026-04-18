@@ -36,8 +36,18 @@
     }
 
     header {
-      padding: 24px 0;
+      padding: 18px 0;
       border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(14, 14, 16, 0.78);
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+    }
+
+    section[id] {
+      scroll-margin-top: 80px;
     }
 
     nav {
@@ -50,7 +60,12 @@
       font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
+
+    .logo:hover { opacity: 0.8; }
 
     .logo span { color: var(--accent); }
 
@@ -313,11 +328,11 @@
   <header>
     <div class="container">
       <nav>
-        <div class="logo">DRDev<span>.</span>App</div>
+        <a href="/" class="logo" aria-label="Retour à l'accueil">DRDev<span>.</span>App</a>
         <ul>
-          <li><a href="#apps">Apps</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/#apps">Apps</a></li>
+          <li><a href="/#about">À propos</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -433,13 +448,13 @@
 
   <footer>
     <div class="container">
-      <p>
-        &copy; 2026 DRDev App — Tous droits réservés.
-      </p>
+      <p>&copy; 2026 DRDev App — Tous droits réservés.</p>
       <p style="margin-top: 8px;">
+        <a href="/">Accueil</a>
+        ·
         <a href="/privacy.html">Politique de confidentialité</a>
         ·
-        <a href="#contact">Contact</a>
+        <a href="/#contact">Contact</a>
       </p>
     </div>
   </footer>
