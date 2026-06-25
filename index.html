@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DRDev App — Apps mobiles utiles, sans fioriture. Développeur indépendant basé en France.">
+  <meta name="description" content="DRDev App — Apps mobiles utiles, sans fioriture. Éditeur de Stop SPAM, l'app anti-démarchage téléphonique pour Android disponible sur Google Play.">
+  <meta property="og:title" content="DRDev App — Apps mobiles utiles, sans fioriture">
+  <meta property="og:description" content="Stop SPAM : bloquez automatiquement les démarcheurs téléphoniques en France via les listes officielles ARCEP. Disponible sur Google Play.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="drdev-banner.png">
   <title>DRDev App — Apps mobiles utiles, sans fioriture</title>
   <link rel="icon" type="image/svg+xml" href="drdev-logo.svg">
   <link rel="alternate icon" type="image/png" href="favicon.png">
@@ -161,11 +165,27 @@
       border-radius: 16px;
       padding: 32px;
       transition: transform 0.2s, border-color 0.2s;
+      position: relative;
     }
 
     .app-card:hover {
       transform: translateY(-2px);
       border-color: var(--accent);
+    }
+
+    .app-status {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 197, 94, 0.3);
     }
 
     .app-icon {
@@ -196,6 +216,24 @@
     }
 
     .app-card a:hover { text-decoration: underline; }
+
+    .play-badge-link {
+      display: inline-block;
+      margin-top: 4px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .play-badge-link:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .play-badge {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
 
     .about-content {
       max-width: 700px;
@@ -311,6 +349,19 @@
 
     footer a:hover { color: var(--text); }
 
+    .footer-badge-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+
+    .footer-badge-link:hover { opacity: 0.8; }
+
+    .footer-badge {
+      height: 44px;
+      width: auto;
+    }
+
     @media (max-width: 640px) {
       nav ul { gap: 20px; }
       .hero { padding: 60px 0 40px; }
@@ -351,10 +402,13 @@
 
         <div class="apps-grid">
           <div class="app-card">
+            <span class="app-status">Disponible maintenant</span>
             <img src="stop-spam-icon.png" alt="Icône Stop SPAM" class="app-icon" width="72" height="72">
             <h3>Stop SPAM</h3>
             <p>Bloque automatiquement les appels indésirables grâce aux listes officielles ARCEP (préfixes NPV) et votre propre liste noire.</p>
-            <a href="https://play.google.com/store/apps/details?id=app.stopspam" target="_blank" rel="noopener">Voir sur Google Play →</a>
+            <a class="play-badge-link" href="https://play.google.com/store/apps/details?id=app.stopspam&referrer=utm_source%3Ddrdev-website%26utm_medium%3Dweb%26utm_campaign%3Dlaunch" target="_blank" rel="noopener" aria-label="Télécharger Stop SPAM sur Google Play">
+              <img src="https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png" alt="Disponible sur Google Play" class="play-badge">
+            </a>
           </div>
         </div>
       </div>
@@ -444,6 +498,9 @@
 
   <footer>
     <div class="container">
+      <a class="footer-badge-link" href="https://play.google.com/store/apps/details?id=app.stopspam&referrer=utm_source%3Ddrdev-website%26utm_medium%3Dfooter%26utm_campaign%3Dlaunch" target="_blank" rel="noopener" aria-label="Télécharger Stop SPAM sur Google Play">
+        <img src="https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png" alt="Disponible sur Google Play" class="footer-badge">
+      </a>
       <p>&copy; 2026 DRDev App — Tous droits réservés.</p>
       <p style="margin-top: 8px;">
         <a href="/">Accueil</a>
