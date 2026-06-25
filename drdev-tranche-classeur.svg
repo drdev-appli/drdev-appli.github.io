@@ -1,0 +1,78 @@
+<svg viewBox="0 0 449 3508" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#16161c"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </radialGradient>
+
+    <radialGradient id="glowTop" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBot" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="textGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c4c4ca"/>
+    </linearGradient>
+
+    <!-- Vertical light ray gradient: very subtle, fades in/out along the spine -->
+    <linearGradient id="rayFade" x1="225" y1="-100" x2="225" y2="3608" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#4ade80" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#86efac" stop-opacity="0.32"/>
+      <stop offset="80%" stop-color="#4ade80" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="rayBlurBig" x="-100%" y="-10%" width="300%" height="120%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <filter id="rayBlurMid" x="-100%" y="-10%" width="300%" height="120%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="rayBlurSoft" x="-100%" y="-10%" width="300%" height="120%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="449" height="3508" fill="url(#bgGrad)"/>
+  <rect width="449" height="3508" fill="url(#glowTop)"/>
+  <rect width="449" height="3508" fill="url(#glowBot)"/>
+
+  <!-- Vertical light ray running along the spine — very subtle halo -->
+  <line x1="225" y1="-100" x2="225" y2="3608"
+        stroke="url(#rayFade)" stroke-width="220"
+        stroke-opacity="0.30" stroke-linecap="round"
+        filter="url(#rayBlurBig)"/>
+  <line x1="225" y1="-100" x2="225" y2="3608"
+        stroke="url(#rayFade)" stroke-width="30"
+        stroke-opacity="0.35" stroke-linecap="round"
+        filter="url(#rayBlurMid)"/>
+
+  <!-- DRDev.App wordmark, rotated 90° counterclockwise (European spine convention: reads bottom→top) -->
+  <text x="225" y="1700"
+        font-family="Segoe UI, -apple-system, Inter, Arial, sans-serif"
+        font-weight="800"
+        font-size="180"
+        fill="url(#textGlass)"
+        letter-spacing="-6"
+        text-anchor="middle"
+        dominant-baseline="central"
+        transform="rotate(-90 225 1700)">DRDev<tspan fill="#22c55e">.</tspan>App</text>
+
+  <!-- Year / category text, also rotated, smaller, near bottom of spine -->
+  <text x="225" y="3250"
+        font-family="Segoe UI, -apple-system, Inter, Arial, sans-serif"
+        font-weight="500"
+        font-size="80"
+        fill="#9ca3af"
+        letter-spacing="8"
+        text-anchor="middle"
+        dominant-baseline="central"
+        transform="rotate(-90 225 3250)">2026</text>
+</svg>
